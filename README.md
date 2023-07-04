@@ -1,8 +1,10 @@
 # atm-project
-Simple ATM Project
+**Simple ATM Project**
+
 This is a simple ATM (Automated Teller Machine) project implemented in Python. It simulates basic ATM operations such as checking balance, withdrawing money, depositing money, transferring funds, and generating receipts.
 
 **Usage**
+
 Upon running the code, you will be prompted to enter your username and password for authentication. The default credentials for this project are as follows:
 
 Username: Ayesha
