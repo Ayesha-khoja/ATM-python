@@ -1,26 +1,81 @@
-# atm-project
-**Simple ATM Project**
+# ATM Project
 
-This is a simple ATM (Automated Teller Machine) project implemented in Python. It simulates basic ATM operations such as checking balance, withdrawing money, depositing money, transferring funds, and generating receipts.
+A simple, Python-based ATM (Automated Teller Machine) simulation. This project provides basic ATM functionalities such as balance inquiry, money withdrawal, deposits, fund transfers, and receipt generation.
 
-**Usage**
+## Features
 
-Upon running the code, you will be prompted to enter your username and password for authentication. The default credentials for this project are as follows:
+- **Check Balance**: View your current account balance.
+- **Withdraw Funds**: Withdraw money from your account.
+- **Deposit Funds**: Deposit money into your account.
+- **Transfer Funds**: Transfer money to another account.
+- **Receipt Generation**: Get a receipt showing transaction history after exiting.
 
-Username: Ayesha
-Password: khoja90
-You can modify these credentials in the code by editing the authen method.
+## Getting Started
 
-Once authenticated, you will be presented with a menu of options:
+### Prerequisites
 
-Check Balance: Displays your current account balance.
-Withdraw: Allows you to withdraw money from your account.
-Deposit: Enables you to deposit money into your account.
-Transfer: Facilitates transferring funds to another account.
-Exit: Quits the program and generates a receipt.
-Follow the instructions provided by the program to perform various operations. You can enter the amount to withdraw, deposit, or transfer. For the transfer operation, you will be prompted to enter the recipient's name and account number.
+- **Python 3.x**: Make sure you have Python installed on your system. You can download it from [python.org](https://www.python.org/).
 
-After selecting the Exit option, you will be asked if you want to generate a receipt. If you choose to generate a receipt, it will display your current balance, the amount withdrawn, deposited, and transferred.
+### Running the Program
 
-**Contributing**
-Contributions to this project are welcome! If you find any issues or have ideas for improvements, please open an issue or submit a pull request on the GitHub repository.
+1. Clone this repository or download the code.
+   ```bash
+   git clone https://github.com/Ayesha-khoja/ATM-python.git
+
+   ```
+2. Run the ATM program using Python:
+   ```bash
+   python ATM-python/atm.py
+   ```
+
+3. On running the program, you'll be prompted to enter your **username** and **password** for authentication. The default credentials are:
+
+   - **Username**: Ayesha
+   - **Password**: khoja90
+
+   You can change these credentials in the `authen` method within the code.
+
+4. Once authenticated, the main menu will appear, allowing you to:
+   - Check your balance.
+   - Withdraw, deposit, or transfer funds.
+   - Exit the program and optionally generate a receipt for your transactions.
+
+## ATM Operations
+
+- **Check Balance**: View your account balance.
+- **Withdraw**: Enter the amount you'd like to withdraw.
+- **Deposit**: Add funds to your account by entering the deposit amount.
+- **Transfer**: Transfer money by providing the recipient's account number and name.
+- **Exit**: Choose to exit the system. You will be asked if you'd like to generate a receipt displaying:
+  - Current balance.
+  - Total withdrawals.
+  - Deposits made.
+  - Transfers processed.
+
+## Modifying Authentication
+
+To change the default username and password, simply edit the `authen` method in the code. Update the values for username and password as needed.
+
+```python
+def authen():
+    username = "Ayesha"
+    password = "khoja90"
+```
+
+## Contributing
+
+Contributions are welcome! If you encounter any issues or have suggestions for improvements, feel free to:
+
+1. Open an issue on this repository.
+2. Submit a pull request with your improvements.
+
+### Guidelines for Contributions:
+- Ensure your changes are properly tested.
+- Follow Python coding standards and conventions.
+- Include descriptive commit messages and documentation where necessary.
+
+## License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
