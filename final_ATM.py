@@ -19,7 +19,7 @@ class Atm:
             self.select_options()
              
         else:
-            print("Authentication Failed!, TRY AGIAN\n\n")
+            print("Authentication Failed!, TRY AGAIN\n\n")
             self.authen() 
 
     def check_balance(self):
@@ -27,7 +27,7 @@ class Atm:
         print(f"your current balance is {self.balance}\n\n" )
 
     def withdraw(self):
-        print("WITHDRAW/n")
+        print("WITHDRAW\n")
         # w_draw =input("Enter the amount that you want to withdraw\n\n")
         while True:
             w_draw = input("Enter the amount that you want to withdraw (type 'exit' to return to options):\n\n")
@@ -43,7 +43,7 @@ class Atm:
                             self.w_draw = w_draw
                             self.balance = self.balance - w_draw
                             
-                            print(f"******{w_draw}, withrawn successfull*******\n")
+                            print(f"******{w_draw}, withdrawn successfull*******\n")
                         else:
                             print("*****  Insufficient balance:)   ****")   
                     else:
@@ -109,7 +109,7 @@ class Atm:
         print("************************************")
         print("*          THANK YOU               *")
         print("************************************")
-        rec=input("\nDo you want your reciept?")
+        rec=input("\nDo you want your receipt?").lower()
 
     
         if(rec=="yes"):
@@ -117,6 +117,13 @@ class Atm:
             
 
     def select_options(self):
+        options = {
+            "1": self.check_balance,
+            "2": self.withdraw,
+            "3": self.deposit,
+            "4": self.transfer,
+            "5": self.exit,
+        }
         while True:
             print("1) chack balance")
             print("2) withdraw")
@@ -124,23 +131,12 @@ class Atm:
             print("4) Transfer")
             print("5) Exit\n")
             select =  input("Select any number: ")
-            if (select == "1"):
-                self.check_balance()
-
-            elif(select=="2"):
-                self.withdraw()
-
-            elif(select=="3"):
-                self.deposit()  
-
-            elif(select=="4"):
-                self.transfer()
-
-            elif(select=="5"):
-                self.exit()    
-                break     
+            if select in options:
+                options[select]()
+                if select == "5":  # Exit condition
+                    break
             else:
-                print("Invalid section!!, please try Again")    
+                print("Invalid selection! Please try again.")    
 
 obj = Atm()
 obj.authen()
